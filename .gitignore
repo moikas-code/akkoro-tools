@@ -1,0 +1,13 @@
+/assets/*.png
+/assets/*.json
+/metadata/*.json
+
+node_modules/
+
+.cache/
+
+doc.md
+
+yarn-error.log
+
+metadata.json
