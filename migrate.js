@@ -4,7 +4,7 @@ require('dotenv').config();
 function copyFolderSync(from, to) {
   if (!fs.existsSync(to)) fs.mkdirSync(to);
   fs.readdirSync(from).forEach((element) => {
-    if (element !== 'node_modules' && element !== '.next' && element !== '.git')
+    if (element !== 'routes' &&element !== 'node_modules' && element !== '.next' && element !== '.git')
       if (fs.lstatSync(path.join(from, element)).isFile()) {
         fs.copyFileSync(path.join(from, element), path.join(to, element));
       } else {
@@ -15,7 +15,8 @@ function copyFolderSync(from, to) {
           element !== 'cli' &&
           element !== 'fair-launch' &&
           element !== 'gumdrop' &&
-          element !== 'view'
+          element !== 'home' &&
+          element !== 'artwork'
         )
           copyFolderSync(path.join(from, element), path.join(to, element));
       }
