@@ -11,7 +11,7 @@
     "metadata": "node write.js",
     "start": "cd ./client/ && yarn start",
     "build": "cd ./client/ && yarn build",
-    "export":"cd ./client/packages/web && yarn export",
+    "export": "cd ./client/packages/web && yarn export",
     "migrate": "node migrate.js",
     "cmd": "ts-node ./metaplex/js/packages/cli/src/candy-machine-cli.ts",
     "upload": "ts-node ./metaplex/js/packages/cli/src/candy-machine-cli.ts upload",
@@ -28,5 +28,8 @@
     "dotenv": "^10.0.0",
     "ts-node": "^10.4.0",
     "yarn": "^1.22.17"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }
